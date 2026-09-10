@@ -1,0 +1,47 @@
+# mudman-fabrication
+
+`mudman-fabrication` is a small, documentation-first toolkit for reproducible AI-assisted digital fabrication projects. It provides shared workflow guidance, project templates, and a conservative fabrication-oriented `.gitignore` without imposing a CAD framework, build system, or Python package.
+
+## Why it exists
+
+Fabrication projects mix several kinds of information: editable design sources, generated exports, validation records, release packages, and physical test results. When those roles are unclear, an old export or a passing digital check can be mistaken for the approved design. This toolkit gives engineers, makers, and AI collaborators a compact vocabulary and a repeatable way to record what is authoritative and what has actually been validated.
+
+The guiding principle is **minimum sufficient scope, context, validation, and reporting**. Make the smallest coherent change, inspect only the relevant files and direct dependencies, choose the lowest validation tier that credibly proves the change, and report the result without unrelated cleanup or process narration.
+
+## Core model
+
+An **authoritative source** is the file or system that owns a decision and should be edited to change it. A **generated artifact** is normally a derived snapshot, not a source of truth, unless the project explicitly designates it as canonical. See [Artifact Roles](workflow/ARTIFACT_ROLES.md) for the complete vocabulary.
+
+Validation is organized into four reusable tiers:
+
+1. Small/local
+2. Geometry/behavior
+3. Manufacturing/export
+4. Production checkpoint/release
+
+Escalate only when the requested outcome or its risk requires it. A digital pass demonstrates only what was checked in software; it does not replace physical fit, process, or production evidence. See [Validation Tiers](workflow/VALIDATION_TIERS.md).
+
+## AI-assisted fabrication workflow
+
+Before changing a project, identify its current repository state, authoritative sources, derived outputs, and validation entry points. Repository state takes precedence over stale conversation history. Keep changes narrowly scoped, preserve unrelated work, check Git status, and inspect staged content before committing. Do not fabricate history or push unless explicitly requested.
+
+The full product-agnostic workflow is in [Generic Codex Workflow](workflow/GENERIC_CODEX_WORKFLOW.md).
+
+## Bootstrap a project
+
+1. Copy the files from [`templates/`](templates/) into the new project's repository root.
+2. Fill in project-specific sources of truth, commands, and validation entry points in `AGENTS.md`.
+3. Record only the current approved state in `PROJECT_STATE.md`.
+4. Define production assumptions and gates in `PRODUCTION_SPEC.md` without inventing universal thresholds.
+5. Adopt [`gitignore/fabrication.gitignore`](gitignore/fabrication.gitignore), then add project-specific rules. Selectively unignore any canonical production artifacts the project intentionally tracks.
+6. Use the physical checklist, validation report, and revision history as evidence is created—not as substitutes for testing.
+
+The [minimal project layout](examples/minimal-project-layout.md) shows how these pieces can relate without prescribing tools or product details.
+
+## Intentionally not included
+
+This first phase does not provide product geometry, product dimensions or tolerances, private manufacturing settings, CAD abstractions, a Python package, slicer-package generation, or dependencies between projects. It is workflow infrastructure only; projects remain responsible for their own tools, profiles, validation logic, and explicitly canonical outputs.
+
+## License
+
+Licensed under the [MIT License](LICENSE).

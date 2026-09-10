@@ -1,0 +1,53 @@
+# Generic fabrication ignore base.
+# Projects may selectively track explicitly canonical production artifacts.
+# Add project-specific output-directory rules in the consuming repository.
+
+# macOS and editor state
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python and test/coverage caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# FreeCAD recovery and backup files
+*.FCStd1
+*.FCStd~
+*.FCStd.bak
+
+# Machine output and logs
+*.gcode
+*.gco
+*.log
+
+# Slicer scratch and temporary exports
+*slicer-scratch*/
+*slice-temp*/
+*temp-export*/
+*.tmp
+*.temp
+*.bak
+*.orig
+*.part
+*.download
+*.cache
