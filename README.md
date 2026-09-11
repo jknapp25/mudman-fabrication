@@ -8,16 +8,16 @@ Fabrication projects mix several kinds of information: editable design sources, 
 
 The guiding principle is **minimum sufficient scope, context, validation, and reporting**. Make the smallest coherent change, inspect only the relevant files and direct dependencies, choose the lowest validation tier that credibly proves the change, and report the result without unrelated cleanup or process narration.
 
-## Core model
+## Sources, artifacts, and validation
 
 An **authoritative source** is the file or system that owns a decision and should be edited to change it. A **generated artifact** is normally a derived snapshot, not a source of truth, unless the project explicitly designates it as canonical. See [Artifact Roles](workflow/ARTIFACT_ROLES.md) for the complete vocabulary.
 
 Validation is organized into four reusable tiers:
 
-1. Small/local
-2. Geometry/behavior
-3. Manufacturing/export
-4. Production checkpoint/release
+1. **Small/local:** documentation, syntax, formatting, and focused checks
+2. **Geometry/behavior:** shape, interfaces, topology, and functional behavior
+3. **Manufacturing/export:** tool configuration, orientation, exports, and warnings
+4. **Production checkpoint/release:** exact release artifacts, evidence, and approval state
 
 Escalate only when the requested outcome or its risk requires it. A digital pass demonstrates only what was checked in software; it does not replace physical fit, process, or production evidence. See [Validation Tiers](workflow/VALIDATION_TIERS.md).
 
@@ -29,7 +29,7 @@ The full product-agnostic workflow is in [Generic Codex Workflow](workflow/GENER
 
 ## Bootstrap a project
 
-1. Copy the files from [`templates/`](templates/) into the new project's repository root.
+1. Copy the files from [`templates/`](templates/) into the new project's repository root. Bracketed fields are intentional prompts to replace with project facts.
 2. Fill in project-specific sources of truth, commands, and validation entry points in `AGENTS.md`.
 3. Record only the current approved state in `PROJECT_STATE.md`.
 4. Define production assumptions and gates in `PRODUCTION_SPEC.md` without inventing universal thresholds.
@@ -40,7 +40,7 @@ The [minimal project layout](examples/minimal-project-layout.md) shows how these
 
 ## Intentionally not included
 
-This first phase does not provide product geometry, product dimensions or tolerances, private manufacturing settings, CAD abstractions, a Python package, slicer-package generation, or dependencies between projects. It is workflow infrastructure only; projects remain responsible for their own tools, profiles, validation logic, and explicitly canonical outputs.
+This repository does not provide product geometry, dimensions or tolerances, manufacturing settings, CAD abstractions, a Python package, slicer-package generation, or dependencies between projects. It is workflow infrastructure only; projects remain responsible for their own tools, profiles, validation logic, and explicitly canonical outputs.
 
 ## License
 
