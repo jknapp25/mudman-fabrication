@@ -37,6 +37,8 @@ When the design relies on a physical interaction, follow [Interface and Function
 
 Visualization is a feedback checkpoint, not merely a final deliverable. Decide automatically between these modes based on the maturity of the work, and use the minimum sufficient effort needed for the next design decision.
 
+For any task that creates or materially changes CAD, changes a physical interface, or reports geometry-dependent validation for visual review, plan the final presentation under the [Visual Fabrication Response Protocol](RESPONSE_PROTOCOL.md). Generating preview files is not sufficient; the final response must pass its inline visual-delivery gate.
+
 ### Mode A — concept visualization
 
 Use concept visualization while deciding what geometry should become: the idea is exploratory, production CAD is not yet authoritative or approved for change, alternatives are being compared, or rebuilding the model would be premature.
@@ -75,4 +77,5 @@ The expected design loop is **propose → visualize → review → revise → vi
 - Keep commits coherent, reviewable, and limited to the requested outcome. Do not fabricate history or create activity-only commits.
 - Do not push unless explicitly requested.
 - Before committing, inspect staged changes for secrets, absolute machine-specific paths, private data, accidental artifacts, unexpected binaries, and unexpectedly large files.
+- Immediately before composing the final response, run the [Visual Fabrication Response Protocol](RESPONSE_PROTOCOL.md) delivery check. When it applies, lead with the immediately visible actual current model and interface-focused view; treat artifact links as supplemental.
 - Report the outcome, the specific validation claims established, important constraints, and any remaining functional or physical unknowns concisely. Avoid narrating routine tool use or unnecessary audits.

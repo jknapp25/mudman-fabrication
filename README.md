@@ -27,12 +27,12 @@ Escalate only when the requested outcome or its risk requires it. A digital pass
 
 Before changing a project, identify its current repository state, authoritative sources, derived outputs, and validation entry points. Repository state takes precedence over stale conversation history. Keep changes narrowly scoped, preserve unrelated work, check Git status, and inspect staged content before committing. Do not fabricate history or push unless explicitly requested.
 
-Visualization is part of the iteration loop. Exploratory proposals receive lightweight conceptual views without unnecessary CAD changes; created or materially revised CAD receives a preview of the current model. Native inline viewing is preferred, with immediately viewable static angles as the fallback. Previous previews become stale after material geometry changes. Important interfaces should be exposed with sections, assembled envelopes, or critical motion states, paired with quantitative checks where appropriate. The canonical contracts and their cost boundaries are in [Generic Codex Workflow](workflow/GENERIC_CODEX_WORKFLOW.md) and [Interface and Functional Validation](workflow/INTERFACE_VALIDATION.md).
+Visualization is part of the iteration loop. Exploratory proposals receive lightweight conceptual views without unnecessary CAD changes; created or materially revised CAD receives a preview of the current model. Native inline viewing is preferred, with immediately viewable static angles as the fallback. Previous previews become stale after material geometry changes. Important interfaces should be exposed with sections, assembled envelopes, or critical motion states, paired with quantitative checks where appropriate. The [Visual Fabrication Response Protocol](workflow/RESPONSE_PROTOCOL.md) makes inline presentation of the actual current model a completion gate rather than merely an artifact-generation step. The canonical design and validation rules remain in [Generic Codex Workflow](workflow/GENERIC_CODEX_WORKFLOW.md) and [Interface and Functional Validation](workflow/INTERFACE_VALIDATION.md).
 
 ## Bootstrap a project
 
 1. Copy the files from [`templates/`](templates/) into the new project's repository root. Bracketed fields are intentional prompts to replace with project facts.
-2. Fill in project-specific sources of truth, commands, preview entry point, validation entry points, and the canonical interface-validation reference in `AGENTS.md`.
+2. Fill in project-specific sources of truth, commands, preview entry point, validation entry points, and references to the canonical interface-validation and visual response/delivery contracts in `AGENTS.md`.
 3. Record only the current approved state in `PROJECT_STATE.md`, including lightweight visualization state and separate geometric, interface/functional, manufacturing/export, and physical validation claims. Do not use it as a preview or test log.
 4. Define production assumptions and gates in `PRODUCTION_SPEC.md` without inventing universal thresholds.
 5. Adopt [`gitignore/fabrication.gitignore`](gitignore/fabrication.gitignore), then add project-specific rules. Selectively unignore any canonical production artifacts the project intentionally tracks.
@@ -40,7 +40,7 @@ Visualization is part of the iteration loop. Exploratory proposals receive light
 
 The [minimal project layout](examples/minimal-project-layout.md) shows how these pieces can relate without prescribing tools or product details.
 
-Existing projects can adopt the current behavior by updating their `AGENTS.md` references to both shared workflow contracts and, when useful, adopting the separated validation headings from `templates/PROJECT_STATE.md` and `templates/VALIDATION_REPORT.md`. No new dependency or framework is required.
+Existing projects can adopt the current behavior by updating their `AGENTS.md` references to the shared workflow, interface-validation, and visual response/delivery contracts and, when useful, adopting the separated validation headings from `templates/PROJECT_STATE.md` and `templates/VALIDATION_REPORT.md`. No new dependency or framework is required.
 
 ## Intentionally not included
 
