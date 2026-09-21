@@ -26,7 +26,7 @@ For each important interface:
 1. Identify both participants. Use simplified nominal, clearance, and interference envelopes when detailed models add no value.
 2. State the relationship being claimed: fit, clearance, capture, seating, access, engagement, or motion.
 3. Check the few dimensions, intersections, gaps, thicknesses, or motion states that can establish that claim.
-4. Check the intended insertion, removal, assembly, or tool-access path when the design relies on one.
+4. Check the intended insertion, removal, assembly, or tool-access path against the actual final solid when the design relies on one.
 5. Record assumptions, results, and what remains physically unvalidated.
 
 Visual inspection should expose the interface and complement measurable checks; it does not replace an obvious dimension or intersection test.
@@ -67,6 +67,8 @@ Do not require global wall-thickness analysis for every model. Trigger the check
 Any feature intended to be accessed must have an appropriate unobstructed path. Check that fixed geometry and normally installed parts do not block the intended use of a hole, pocket, slot, control, fastener, or mating feature.
 
 Examples include screw insertion, head seating, driver approach, part insertion, and intended removal. If temporary removal of another component is required, document it as part of the access procedure rather than assuming access.
+
+Where obstruction is a credible risk, move or sweep the required screw-head, tool, mating-part, or removal envelope continuously through the **actual final solid** from its starting position to its seated, engaged, assembled, or clear position. A nominal diameter or clearance comparison against one opening is supporting evidence, not proof of an unobstructed path. Check the full path for intersections and report the minimum clearance where practical.
 
 ## Moving mechanisms
 
