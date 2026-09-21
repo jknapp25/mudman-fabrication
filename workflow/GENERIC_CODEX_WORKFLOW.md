@@ -27,6 +27,37 @@ Do not run a higher tier merely because its tooling exists. Do not regenerate un
 - Treat generated files and metadata as snapshots unless the project explicitly designates them as canonical. If a snapshot disagrees with current source, do not silently promote it to authority.
 - Keep documentation concise and link to authoritative files rather than duplicating configurations that can drift.
 
+## Visualization-first iteration
+
+Visualization is a feedback checkpoint, not merely a final deliverable. Decide automatically between these modes based on the maturity of the work, and use the minimum sufficient effort needed for the next design decision.
+
+### Mode A — concept visualization
+
+Use concept visualization while deciding what geometry should become: the idea is exploratory, production CAD is not yet authoritative or approved for change, alternatives are being compared, or rebuilding the model would be premature.
+
+- Do not modify production CAD merely to make the idea visible.
+- Create the smallest useful engineering-style view: one sketch when one is enough; otherwise the necessary front, side, top, section, dimensioned, or motion-state views.
+- Prefer clear schematic geometry over polished rendering. These drawings communicate intent and are not manufacturing artifacts or validation evidence.
+- Show enough angles or states for the user to understand the proposal and request revisions before further speculative design work.
+
+### Mode B — actual model preview
+
+Use an actual model preview whenever CAD is first created or materially changed in shape, fit, dimensions, interfaces, mechanism motion, or appearance. A completion that changes geometry should normally include the updated visualization.
+
+- Regenerate or open the current geometry, run only the minimum credible validation, and present the current model before continuing into additional speculative design work.
+- Prefer the best native inline 3D preview available in ChatGPT Work or the current environment, especially when it supports orbit, pan, zoom, and useful isometric/front/side/top views.
+- For assemblies or mechanisms, include important positions or states when inexpensive and materially useful for review.
+- Do not substitute a conceptual sketch when revised actual CAD exists and can reasonably be previewed.
+
+### Freshness, fallback, and cost boundary
+
+- A visualization presented as the **current model** must correspond to the current geometry. After a material geometry change, previous previews are stale until regenerated; never present them as current.
+- If interactive inline display is unavailable, do not silently omit visualization. Use the best immediately viewable fallback, normally static renders or screenshots from enough useful angles, and state which preferred capability was unavailable.
+- Lack of interactive preview must not block ordinary CAD progress. Do not install large dependencies or build custom viewers unless the project specifically requires them.
+- Visualization alone does not trigger manufacturing validation, slicing, printer packaging, exhaustive testing, production exports, or high-quality rendering. Escalate those only when the task or existing project rules require them.
+
+The expected design loop is **propose → visualize → review → revise → visualize → review**, followed by manufacturing validation only when appropriate. Give special priority to visual review for mechanisms, mating interfaces, clearances, proportions, ergonomics, mounting, moving parts, spatial relationships, and form decisions.
+
 ## Git and reporting
 
 - Keep commits coherent, reviewable, and limited to the requested outcome. Do not fabricate history or create activity-only commits.

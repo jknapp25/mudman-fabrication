@@ -2,7 +2,7 @@
 
 ## Canonical generic workflow
 
-Follow the project's adopted copy or pinned reference to `GENERIC_CODEX_WORKFLOW.md`. In particular: use minimum sufficient scope, inspect targeted files, preserve unrelated work, choose the lowest credible validation tier, respect artifact roles, check Git status, and do not push unless requested.
+Follow the project's adopted copy or pinned reference to `GENERIC_CODEX_WORKFLOW.md`. In particular: use minimum sufficient scope, inspect targeted files, preserve unrelated work, choose the lowest credible validation tier, respect artifact roles, follow the visualization-first iteration contract, check Git status, and do not push unless requested.
 
 Canonical workflow location: `[path or URL]`
 
@@ -21,6 +21,7 @@ Canonical workflow location: `[path or URL]`
 
 - Build: `[command]`
 - Focused checks: `[command]`
+- Actual-model preview: `[native capability, command, or best available fallback]`
 - Export/package: `[command]`
 
 ### Validation entry points

@@ -10,6 +10,15 @@
 
 - `[path — role]`
 
+## Current visualization state
+
+<!-- Keep this lightweight. Update for approved/current geometry state, not every concept sketch. -->
+
+- Geometry maturity: `[conceptual / implemented]`
+- Latest actual model revision previewed: `[revision/commit or not yet previewed]`
+- Current preview entry point or artifact: `[native command/path/none]`
+- Preview freshness: `[current / stale because geometry changed / not applicable]`
+
 ## Digital validation
 
 - `[revision, check, date, result, evidence link]`
