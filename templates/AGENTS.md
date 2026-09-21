@@ -2,9 +2,10 @@
 
 ## Canonical generic workflow
 
-Follow the project's adopted copy or pinned reference to `GENERIC_CODEX_WORKFLOW.md`. In particular: use minimum sufficient scope, inspect targeted files, preserve unrelated work, choose the lowest credible validation tier, respect artifact roles, follow the visualization-first iteration contract, check Git status, and do not push unless requested.
+Follow the project's adopted copy or pinned reference to `GENERIC_CODEX_WORKFLOW.md`. In particular: use minimum sufficient scope, inspect targeted files, preserve unrelated work, choose the lowest credible validation tier, distinguish geometric validity from functional and physical validation, apply the shared interface-validation contract where physical interactions matter, respect artifact roles, follow the visualization-first iteration contract, check Git status, and do not push unless requested.
 
 Canonical workflow location: `[path or URL]`
+Canonical interface-validation contract: `[path or URL to INTERFACE_VALIDATION.md]`
 
 ## PROJECT-SPECIFIC RULES
 

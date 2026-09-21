@@ -15,13 +15,17 @@
 
 ## Methods and results
 
-| Check | Method | Result | Evidence |
-|---|---|---|---|
-| `[check]` | `[method]` | `[pass/fail/inconclusive]` | `[link]` |
+| Category | Claim checked | Method | Result | Evidence |
+|---|---|---|---|---|
+| `[geometric / interface-functional / manufacturing-export / physical]` | `[specific property]` | `[method]` | `[pass/fail/inconclusive]` | `[link]` |
 
-## Physical validation
+## Interface assumptions and limitations
 
-`[performed with specimen/evidence, not performed, or not applicable]`
+- **Counterpart or envelope:** `[hardware, mating part, inserted object, tool, motion envelope, or not applicable]`
+- **Nominal clearance/interference:** `[value or not applicable]`
+- **Access/insertion/removal:** `[checked result, not checked, or not applicable]`
+- **Minimum relevant material thickness:** `[value, not checked, or not applicable]`
+- **Physical validation:** `[performed with specimen/evidence, not performed, or not applicable]`
 
 ## Deviations and limitations
 
@@ -30,5 +34,7 @@
 ## Decision
 
 - **Status:** `[approved / rejected / experimental / blocked]`
+- **Validated claims:** `[specific claims only; avoid unqualified “validated”]`
+- **Unvalidated claims:** `[remaining functional or physical unknowns]`
 - **Approved by:** `[name/role if required]`
 - **Next action:** `[action or none]`

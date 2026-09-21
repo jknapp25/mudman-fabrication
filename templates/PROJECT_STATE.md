@@ -19,9 +19,19 @@
 - Current preview entry point or artifact: `[native command/path/none]`
 - Preview freshness: `[current / stale because geometry changed / not applicable]`
 
-## Digital validation
+## Geometric validation
 
-- `[revision, check, date, result, evidence link]`
+- `[revision, solid/topology/export check, date, result, evidence link]`
+
+## Interface / functional validation
+
+<!-- Record only interfaces that matter: counterpart/envelope, claim checked, result, and limitations. -->
+
+- `[revision, interface or functional check, nominal assumptions, result, evidence link]`
+
+## Manufacturing / export validation
+
+- `[revision, manufacturing/export check, date, result, evidence link]`
 
 ## Physical validation
 

@@ -19,28 +19,28 @@ Validation is organized into four reusable tiers:
 3. **Manufacturing/export:** tool configuration, orientation, exports, and warnings
 4. **Production checkpoint/release:** exact release artifacts, evidence, and approval state
 
+Within those tiers, validation claims remain explicit: geometric validity, interface/functional validity, manufacturing/export validity, and physical validation are not interchangeable. A manifold STL does not prove that hardware seats, mating parts assemble, tools have access, material remains thick enough, or a snap fit works. Use [Interface and Functional Validation](workflow/INTERFACE_VALIDATION.md) when a project relies on those relationships.
+
 Escalate only when the requested outcome or its risk requires it. A digital pass demonstrates only what was checked in software; it does not replace physical fit, process, or production evidence. See [Validation Tiers](workflow/VALIDATION_TIERS.md).
 
 ## AI-assisted fabrication workflow
 
 Before changing a project, identify its current repository state, authoritative sources, derived outputs, and validation entry points. Repository state takes precedence over stale conversation history. Keep changes narrowly scoped, preserve unrelated work, check Git status, and inspect staged content before committing. Do not fabricate history or push unless explicitly requested.
 
-Visualization is part of the iteration loop. Exploratory proposals receive lightweight conceptual views without unnecessary CAD changes; created or materially revised CAD receives a preview of the current model. Native inline viewing is preferred, with immediately viewable static angles as the fallback. Previous previews become stale after material geometry changes. The canonical contract and its cost boundaries are in [Generic Codex Workflow](workflow/GENERIC_CODEX_WORKFLOW.md).
-
-The full product-agnostic workflow is in [Generic Codex Workflow](workflow/GENERIC_CODEX_WORKFLOW.md).
+Visualization is part of the iteration loop. Exploratory proposals receive lightweight conceptual views without unnecessary CAD changes; created or materially revised CAD receives a preview of the current model. Native inline viewing is preferred, with immediately viewable static angles as the fallback. Previous previews become stale after material geometry changes. Important interfaces should be exposed with sections, assembled envelopes, or critical motion states, paired with quantitative checks where appropriate. The canonical contracts and their cost boundaries are in [Generic Codex Workflow](workflow/GENERIC_CODEX_WORKFLOW.md) and [Interface and Functional Validation](workflow/INTERFACE_VALIDATION.md).
 
 ## Bootstrap a project
 
 1. Copy the files from [`templates/`](templates/) into the new project's repository root. Bracketed fields are intentional prompts to replace with project facts.
-2. Fill in project-specific sources of truth, commands, preview entry point, and validation entry points in `AGENTS.md`.
-3. Record only the current approved state in `PROJECT_STATE.md`, including its lightweight visualization status. Do not use it as a preview log.
+2. Fill in project-specific sources of truth, commands, preview entry point, validation entry points, and the canonical interface-validation reference in `AGENTS.md`.
+3. Record only the current approved state in `PROJECT_STATE.md`, including lightweight visualization state and separate geometric, interface/functional, manufacturing/export, and physical validation claims. Do not use it as a preview or test log.
 4. Define production assumptions and gates in `PRODUCTION_SPEC.md` without inventing universal thresholds.
 5. Adopt [`gitignore/fabrication.gitignore`](gitignore/fabrication.gitignore), then add project-specific rules. Selectively unignore any canonical production artifacts the project intentionally tracks.
 6. Use the physical checklist, validation report, and revision history as evidence is created—not as substitutes for testing.
 
 The [minimal project layout](examples/minimal-project-layout.md) shows how these pieces can relate without prescribing tools or product details.
 
-Existing projects can adopt the same behavior by updating their `AGENTS.md` reference or adopted workflow copy and adding the lightweight visualization-state section from `templates/PROJECT_STATE.md` when it helps prevent stale-preview confusion.
+Existing projects can adopt the current behavior by updating their `AGENTS.md` references to both shared workflow contracts and, when useful, adopting the separated validation headings from `templates/PROJECT_STATE.md` and `templates/VALIDATION_REPORT.md`. No new dependency or framework is required.
 
 ## Intentionally not included
 

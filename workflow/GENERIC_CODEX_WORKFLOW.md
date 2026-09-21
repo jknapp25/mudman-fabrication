@@ -20,6 +20,12 @@ Choose the lowest tier that credibly proves the requested change, escalating onl
 
 Do not run a higher tier merely because its tooling exists. Do not regenerate unaffected artifacts, and never describe digital validation as physical validation.
 
+### Geometric validity is not functional validity
+
+A valid solid, BRep, mesh, or export proves only the geometric properties actually checked. It does not by itself prove hardware fit, mating, clearance, access, insertion, removal, retention, material thickness, or mechanism motion. Never use an unqualified “validated”; name the validated property and the remaining unknowns.
+
+When the design relies on a physical interaction, follow [Interface and Functional Validation](INTERFACE_VALIDATION.md). Use representative hardware, mating-part, tool-access, inserted-object, or motion envelopes and the minimum quantitative or intersection checks needed for the current risk. Physical performance remains unvalidated until an identified specimen is tested.
+
 ## Sources of truth
 
 - Identify authoritative source, derived output, validation evidence, release artifact, and physical validation evidence before editing.
@@ -49,6 +55,12 @@ Use an actual model preview whenever CAD is first created or materially changed 
 - For assemblies or mechanisms, include important positions or states when inexpensive and materially useful for review.
 - Do not substitute a conceptual sketch when revised actual CAD exists and can reasonably be previewed.
 
+### Interface-focused views
+
+When an interface or functional feature matters, make the preview expose it. Prefer the minimum useful section, assembled view, envelope overlay, or critical motion state—for example, a section through a screw and neighboring pocket, both mating parts assembled, a seated object in a snap feature, or sampled mechanism positions.
+
+Visual inspection helps reveal obstruction and spatial mistakes, but it does not replace obvious measurable checks such as clearance, interference, engagement, minimum material thickness, or envelope intersection.
+
 ### Freshness, fallback, and cost boundary
 
 - A visualization presented as the **current model** must correspond to the current geometry. After a material geometry change, previous previews are stale until regenerated; never present them as current.
@@ -63,4 +75,4 @@ The expected design loop is **propose → visualize → review → revise → vi
 - Keep commits coherent, reviewable, and limited to the requested outcome. Do not fabricate history or create activity-only commits.
 - Do not push unless explicitly requested.
 - Before committing, inspect staged changes for secrets, absolute machine-specific paths, private data, accidental artifacts, unexpected binaries, and unexpectedly large files.
-- Report the outcome, validation performed, important constraints, and any remaining decision concisely. Avoid narrating routine tool use or unnecessary audits.
+- Report the outcome, the specific validation claims established, important constraints, and any remaining functional or physical unknowns concisely. Avoid narrating routine tool use or unnecessary audits.
