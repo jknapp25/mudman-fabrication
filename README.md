@@ -23,10 +23,7 @@ Within those tiers, validation claims remain explicit: geometric validity, inter
 
 Escalate only when the requested outcome or its risk requires it. A digital pass demonstrates only what was checked in software; it does not replace physical fit, process, or production evidence. See [Validation Tiers](workflow/VALIDATION_TIERS.md).
 
-For Bambu 3MF work, use the three explicit artifact classes and hard acceptance
-gates in [Bambu 3MF Artifact Classes and Gates](workflow/BAMBU_3MF_ARTIFACTS.md).
-A geometry exchange file, an unvalidated configured project, and a validated
-print-ready project are different deliverables.
+For Bambu work, use the three artifact classes in [Bambu 3MF Artifact Classes and Gates](workflow/BAMBU_3MF_ARTIFACTS.md). Linux x86-64 projects can provision the pinned official runtime candidate with `scripts/bootstrap_bambu_linux.sh`, then run a project-owned manifest through `scripts/bambu_manufacture.py MANUFACTURING.json` only after the recorded golden parity gate is passing. See [Cloud Bambu Manufacturing](workflow/CLOUD_BAMBU_MANUFACTURING.md) and the current [runtime status](validation/BAMBU_CLOUD_RUNTIME_STATUS.md).
 
 ## AI-assisted fabrication workflow
 
@@ -49,7 +46,7 @@ Existing projects can adopt the current behavior by updating their `AGENTS.md` r
 
 ## Intentionally not included
 
-This repository does not provide product geometry, dimensions or tolerances, manufacturing settings, CAD abstractions, a Python package, slicer-package generation, or dependencies between projects. It is workflow infrastructure only; projects remain responsible for their own tools, profiles, validation logic, and explicitly canonical outputs.
+This repository does not provide product geometry, dimensions or tolerances, manufacturing settings, CAD abstractions, or dependencies between projects. It provides a pinned Bambu runtime and shared serialization/validation interface; projects remain responsible for their geometry, profiles, product-specific validation, and canonical outputs.
 
 ## License
 

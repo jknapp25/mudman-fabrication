@@ -17,6 +17,9 @@
 - Geometry maturity: `[conceptual / implemented]`
 - Latest actual model revision previewed: `[revision/commit or not yet previewed]`
 - Current preview entry point or artifact: `[native command/path/none]`
+- Manufacturing manifest: `[MANUFACTURING.json path/none]`
+- Pinned Bambu runtime parity: `[version and passing evidence/not adopted]`
+- Current 3MF artifact class: `[Geometry / Configured Bambu Project / Validated Print-Ready Bambu / none]`
 - Preview freshness: `[current / stale because geometry changed / not applicable]`
 
 ## Geometric validation

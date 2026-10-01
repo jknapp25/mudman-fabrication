@@ -22,6 +22,10 @@ htmlcov/
 .venv/
 venv/
 env/
+.bambu-cache/
+.runtime/
+result.json
+validation/runtime-parity/*.3mf
 
 *.FCStd1
 *.FCStd~

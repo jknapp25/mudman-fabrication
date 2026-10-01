@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "geometry_3mf": "outputs/example_geometry.3mf",
+  "output_project_3mf": "outputs/example_bambu_project.3mf",
+  "validation_report": "outputs/BambuManufacturingValidation.json",
+  "intent": {"printer_model":"Bambu Lab P2S","nozzle_mm":0.4,"build_plate":"Textured PEI Plate","material":"project-defined","orientation":"project-defined","supports":false,"brim":false},
+  "profiles": {"machine":"manufacturing/profiles/machine.json","process":"manufacturing/profiles/process.json","filaments":["manufacturing/profiles/filament.json"]},
+  "expect": {"require_gcode":true,"project_settings":{"printer_model":"Bambu Lab P2S","printer_variant":"0.4","curr_bed_type":"Textured PEI Plate"}}
+}

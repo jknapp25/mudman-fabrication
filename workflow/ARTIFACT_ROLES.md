@@ -8,7 +8,4 @@
 
 These roles may overlap only when a project says so explicitly. Distinguishing them prevents stale generated files from becoming accidental sources of truth and keeps an old digital pass or export from being mistaken for current physical or production approval.
 
-For Bambu 3MF deliverables, also assign one of the mandatory artifact classes:
-**Geometry 3MF**, **Configured Bambu Project 3MF**, or **Validated Print-Ready
-Bambu 3MF**. Follow [Bambu 3MF Artifact Classes and Gates](BAMBU_3MF_ARTIFACTS.md);
-package validity alone cannot promote an artifact to configured or print-ready.
+For Bambu deliverables, also assign exactly one class from [Bambu 3MF Artifact Classes and Gates](BAMBU_3MF_ARTIFACTS.md). Package validity alone cannot promote an artifact to configured or print-ready.

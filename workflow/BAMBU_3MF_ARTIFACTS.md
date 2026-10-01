@@ -75,7 +75,8 @@ Bambu result or log.
 
 ## Supported cloud-to-local workflow
 
-When Bambu Studio is not installed in the execution environment:
+When the pinned cloud runtime lacks a passing exact-golden parity record or the
+execution host cannot run it:
 
 1. **Cloud:** approve CAD; create and validate the fine manufacturing mesh;
    export a clearly labeled Geometry 3MF; record manufacturing intent.
@@ -87,7 +88,7 @@ When Bambu Studio is not installed in the execution environment:
 4. **Repository:** retain the canonical Bambu-generated artifact and validation
    evidence only when the project tracking policy calls for them.
 
-Cloud generation may claim a Configured Bambu Project only when a supported
-Bambu serializer is actually available and used. Reusing an old project's
-private metadata without the authoritative application is not a supported
-shortcut.
+Cloud generation may claim a Configured Bambu Project only when a supported,
+parity-proven Bambu serializer is actually available and used. Reusing an old
+project's private metadata without the authoritative application is not a
+supported shortcut.
