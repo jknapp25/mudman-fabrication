@@ -4,6 +4,11 @@
 
 Follow the project's adopted copy or pinned reference to `GENERIC_CODEX_WORKFLOW.md`. In particular: use minimum sufficient scope, inspect targeted files, preserve unrelated work, choose the lowest credible validation tier, distinguish geometric validity from functional and physical validation, apply the shared interface-validation contract where physical interactions matter, respect artifact roles, follow visualization-first iteration, plan the required actual-model view, run the visual response-delivery check immediately before the final response, check Git status, and do not push unless requested.
 
+For any Bambu 3MF, follow `BAMBU_3MF_ARTIFACTS.md` and state exactly one
+artifact class. Never call a Geometry 3MF configured or print-ready. Treat
+`The 3mf file has invalid config, load geometry data only` as a hard failure for
+configured and print-ready status.
+
 Canonical workflow location: `[path or URL]`
 Canonical interface-validation contract: `[path or URL to INTERFACE_VALIDATION.md]`
 Canonical visual response/delivery contract: `[path or URL to RESPONSE_PROTOCOL.md]`

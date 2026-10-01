@@ -23,6 +23,11 @@ Within those tiers, validation claims remain explicit: geometric validity, inter
 
 Escalate only when the requested outcome or its risk requires it. A digital pass demonstrates only what was checked in software; it does not replace physical fit, process, or production evidence. See [Validation Tiers](workflow/VALIDATION_TIERS.md).
 
+For Bambu 3MF work, use the three explicit artifact classes and hard acceptance
+gates in [Bambu 3MF Artifact Classes and Gates](workflow/BAMBU_3MF_ARTIFACTS.md).
+A geometry exchange file, an unvalidated configured project, and a validated
+print-ready project are different deliverables.
+
 ## AI-assisted fabrication workflow
 
 Before changing a project, identify its current repository state, authoritative sources, derived outputs, and validation entry points. Repository state takes precedence over stale conversation history. Keep changes narrowly scoped, preserve unrelated work, check Git status, and inspect staged content before committing. Do not fabricate history or push unless explicitly requested.

@@ -21,8 +21,19 @@ A geometric pass is not an interface/functional pass. Apply the reusable checks 
 
 Use when manufacturability, export correctness, machine configuration, orientation, packaging, or slicer/tool interpretation is part of the outcome. Regenerate only affected outputs and inspect settings, contents, and warnings.
 
+For Bambu 3MFs, record the artifact class defined in
+[Bambu 3MF Artifact Classes and Gates](BAMBU_3MF_ARTIFACTS.md). A Geometry 3MF
+passes only geometry/package checks. A Configured Bambu Project remains
+unvalidated until Bambu Studio accepts its configuration. The warning
+`The 3mf file has invalid config, load geometry data only` is a hard failure for
+configured and print-ready claims.
+
 ## 4. Production checkpoint/release
 
 Use when approving or publishing an exact production package. Verify the release artifact, its traceability to source, required digital and physical evidence, approval status, and rollback or reference state.
+
+A Bambu artifact may enter this tier as **Validated Print-Ready** only after the
+exact retained file passes the authoritative Bambu Studio configuration and
+slice gates without warnings.
 
 Higher tiers cost more time and may create unrelated outputs. Running them without need adds noise rather than confidence. Conversely, lower-tier success must not be presented as evidence for properties it did not test, especially functional fit or physical performance.

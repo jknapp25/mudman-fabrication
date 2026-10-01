@@ -12,6 +12,9 @@
 - **Authoritative sources:** `[paths/identifiers]`
 - **Derived outputs:** `[paths/identifiers]`
 - **Release artifact, if applicable:** `[identifier]`
+- **3MF artifact class, if applicable:** `[Geometry 3MF / Configured Bambu Project 3MF / Validated Print-Ready Bambu 3MF]`
+- **Artifact SHA-256:** `[digest or not applicable]`
+- **Bambu Studio version and result:** `[version; accepted/warning/not run]`
 
 ## Methods and results
 
