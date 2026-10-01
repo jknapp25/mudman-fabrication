@@ -9,6 +9,11 @@ artifact class. Never call a Geometry 3MF configured or print-ready. Treat
 `The 3mf file has invalid config, load geometry data only` as a hard failure for
 configured and print-ready status.
 
+When cloud manufacturing is adopted, keep project-specific intent in
+`MANUFACTURING_INTENT.json`; use the shared pinned Bambu launcher and
+`bambu_manufacture.py` rather than embedding Bambu packaging logic in the
+product repository. A runtime upgrade requires golden-project parity evidence.
+
 Canonical workflow location: `[path or URL]`
 Canonical interface-validation contract: `[path or URL to INTERFACE_VALIDATION.md]`
 Canonical visual response/delivery contract: `[path or URL to RESPONSE_PROTOCOL.md]`

@@ -1,0 +1,24 @@
+{
+  "geometry_3mf": "outputs/example_geometry.3mf",
+  "configured_3mf": "outputs/example_bambu_project.3mf",
+  "validation_dir": "outputs/manufacturing-validation",
+  "printer": "Bambu Lab P2S",
+  "nozzle_mm": 0.4,
+  "build_plate": "Textured PEI Plate",
+  "machine_profile": "profiles/machine.json",
+  "process_profile": "profiles/process.json",
+  "filament_profiles": ["profiles/filament.json"],
+  "profile_root": null,
+  "orientation": "project-defined; geometry must already be oriented",
+  "supports": false,
+  "brim": false,
+  "bambu_overrides": {
+    "support_type": "normal(auto)",
+    "enable_support": "0",
+    "brim_type": "no_brim"
+  },
+  "validation_expectations": [
+    "configuration loads without invalid-config warning",
+    "all plates slice successfully"
+  ]
+}

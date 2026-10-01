@@ -73,9 +73,43 @@ a configured/print-ready claim when required Bambu metadata is absent, and
 fails any configured/print-ready claim when the warning appears in the supplied
 Bambu result or log.
 
-## Supported cloud-to-local workflow
+## Supported cloud workflow
 
-When Bambu Studio is not installed in the execution environment:
+On Ubuntu 24.04 x86-64, provision the pinned official runtime with:
+
+```sh
+MUDMAN_BAMBU_RUNTIME_DIR=/durable/runtime/path scripts/bootstrap_bambu_linux.sh
+```
+
+A fabrication project adopts the capability by copying
+`templates/MANUFACTURING_INTENT.json`, supplying its geometry plus full machine,
+process, and filament profiles, and running:
+
+```sh
+MUDMAN_BAMBU_RUNTIME_DIR=/durable/runtime/path \
+  python3 path/to/mudman-fabrication/scripts/bambu_manufacture.py \
+  path/to/project/MANUFACTURING_INTENT.json \
+  --parity-report /durable/runtime/path/parity/parity-report.json
+```
+
+The command asks Bambu Studio itself to create the configured project, reopens
+that exact artifact, slices every plate, rejects the invalid-config warning,
+records the Bambu version and artifact hashes, and emits one classification.
+Projects remain responsible for geometry generation, the chosen profiles,
+orientation, product-specific toolpath expectations, and physical validation.
+
+Cloud runtime authority is version- and platform-specific. A new Bambu version
+must pass a recorded golden-project parity test before replacing the pin. The
+parity test must re-export, reopen, and slice the accepted golden project and
+compare printer, nozzle, plate, filament, process, orientation, and relevant
+project settings. Merely launching the binary is insufficient.
+`bambu_manufacture.py` will not promote an artifact to validated print-ready
+unless a passing parity report for the exact running Bambu version is supplied.
+
+## Fallback cloud-to-local workflow
+
+When the pinned runtime cannot be provisioned or has not passed the project's
+required parity gate:
 
 1. **Cloud:** approve CAD; create and validate the fine manufacturing mesh;
    export a clearly labeled Geometry 3MF; record manufacturing intent.

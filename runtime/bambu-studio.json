@@ -1,0 +1,13 @@
+{
+  "version": "02.08.02.61",
+  "platform": "ubuntu24.04-x86_64",
+  "url": "https://github.com/bambulab/BambuStudio/releases/download/v02.08.02.61/BambuStudio_ubuntu24.04-v02.08.02.61-20260820225108.AppImage",
+  "sha256": "d501b103fac5424513ec0e8d6bc145fb30719de2c7d94d7320d723740c81a7fd",
+  "debian_packages": [
+    "xvfb",
+    "libwebkit2gtk-4.1-0",
+    "libgstreamer1.0-0",
+    "libgstreamer-plugins-base1.0-0",
+    "libwayland-server0"
+  ]
+}

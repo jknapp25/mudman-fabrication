@@ -28,6 +28,13 @@ gates in [Bambu 3MF Artifact Classes and Gates](workflow/BAMBU_3MF_ARTIFACTS.md)
 A geometry exchange file, an unvalidated configured project, and a validated
 print-ready project are different deliverables.
 
+On Ubuntu 24.04 x86-64, the repository can provision its pinned official Bambu
+Studio AppImage and run it under a private Xvfb display. Projects declare only
+their geometry, full profiles, small intentional overrides, orientation, and
+validation expectations in `MANUFACTURING_INTENT.json`. The shared command then
+uses Bambu Studio to serialize, reopen, and slice the exact configured project.
+See [Bambu 3MF Artifact Classes and Gates](workflow/BAMBU_3MF_ARTIFACTS.md).
+
 ## AI-assisted fabrication workflow
 
 Before changing a project, identify its current repository state, authoritative sources, derived outputs, and validation entry points. Repository state takes precedence over stale conversation history. Keep changes narrowly scoped, preserve unrelated work, check Git status, and inspect staged content before committing. Do not fabricate history or push unless explicitly requested.
@@ -49,7 +56,11 @@ Existing projects can adopt the current behavior by updating their `AGENTS.md` r
 
 ## Intentionally not included
 
-This repository does not provide product geometry, dimensions or tolerances, manufacturing settings, CAD abstractions, a Python package, slicer-package generation, or dependencies between projects. It is workflow infrastructure only; projects remain responsible for their own tools, profiles, validation logic, and explicitly canonical outputs.
+This repository does not provide product geometry, dimensions or tolerances,
+product-specific manufacturing settings, CAD abstractions, or dependencies
+between projects. It provides the shared Bambu runtime/validation contract;
+projects remain responsible for their profiles, geometry, validation logic,
+and explicitly canonical outputs.
 
 ## License
 
